@@ -1,0 +1,338 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    width: 100%;
+
+}
+a{
+    color:black;
+    text-decoration: none;
+    text-transform: capitalize;
+
+}
+header{
+    background:#333131;
+    width: 100%;
+    height: 7rem;
+    padding: 10px;
+}
+nav{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 6.25rem;         /* 👈 الحجم النهائي الذي تريده */
+  height: auto;
+  display: block;
+  cursor: pointer;
+  object-fit: contain;
+  margin-right: 5rem;
+} 
+nav ul{
+  
+    
+    display: flex;
+    list-style: none;
+    margin-right: 2rem;
+
+}
+nav ul a{
+    margin-right: 2.2rem;
+    color:#FFFFFF ;
+    border-bottom:  1px solid transparent  ;
+    font-size: 1rem;
+    font-weight: 400;
+}
+nav ul a:hover{
+    color: #e50c1e;
+    border-bottom:  2px solid #00843D  ;
+
+}
+nav ul a.active{
+    color:#e50c1e ;
+    border-bottom: 2px solid #00843D
+}
+/*                                header end                                     */
+.hero-section {
+    position: relative;
+    height: 90vh;
+    background-image: url('../images/maroc-fans.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 247, 247);
+ }
+  
+.overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+   
+  }
+  
+.hero-content {
+    
+    z-index: 2;
+    text-align: center;
+  }
+.hero-content h1{
+    font-weight: 800;
+}
+.hero-content p{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.hero-content .year{
+    font-weight: 600;
+}
+.hero-content .cup{
+   color:#D4AF37;
+}
+
+.morocco{
+   background: linear-gradient(to right , red  0%,#e60000 40%,#009900 60%, green 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+.hero-content .Tickets{
+    border: none;
+    position: relative;
+    top: 1rem;
+    box-sizing: border-box;
+    padding: 10px ;
+    font-size: 16px;
+   background-color: #edc33b;
+   border-radius: 13px;
+   cursor: pointer;
+
+   transition: transform 0.3s ease;
+}
+.ticket-icon{
+    color:#716e6e ;
+}
+.hero-content .Tickets:hover{
+    transform: scale(1.1);
+}
+.cta-button {
+    display: inline-block;
+    display: inline-block;
+    animation: pulse 1.5s infinite;
+    animation: pulse 1.5s infinite;
+}
+
+
+
+
+@keyframes pulse {
+   
+    0% {
+      transform: scale(1);
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
+      box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
+    }
+    
+    
+    70% {
+      transform: scale(1.05);
+      transform: scale(1.05);
+      box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
+      box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
+    }
+    
+    
+    100% {
+      transform: scale(1);
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+      box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+    }
+    
+  }
+
+  /* hero section end*/
+  /* hero section end*/
+
+
+/*                                  start Venues Section            */
+/*                                  start Venues Section            */
+             
+             
+
+.Venues{
+    width: 100%;
+    height: 100vh;
+    background-image:url( ../images/venues-background.webp);
+    background-size: cover;
+    background-position: center ;
+    position: relative;
+    
+    display: flex;
+    color: #FFFFFF;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.venues-section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* طبقة داكنة */
+
+  }
+.content{
+    display: flex;
+    
+    position: relative;
+    z-index: 2;
+    display: flex;
+    border: 1px solid;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+   
+   
+}
+.Venues .content .city{
+    height: auto;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    padding: 1rem;
+    box-sizing: border-box;
+    
+    border-radius: 20px;
+  }
+.stadiums{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* دائمًا عمودين */
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-items: center;
+    align-items: center;
+}
+.stade-card{
+    position: relative;
+    width: 350px;
+    height: 200px;
+ 
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    border: 1px solid;
+
+}
+.stade-card:hover {
+    transform: scale(1.01);
+    border-color: red;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+   }
+.stade-card img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height:60%;
+    object-fit: cover;
+    border-radius: 0.9rem;
+    overflow: hidden;
+    z-index: 1;
+    
+}
+.stade-card .info{
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    padding: 1rem;
+    color: white;
+    
+    align-items: flex-start;
+}
+.info  h2{
+    margin-bottom: 1rem;
+
+    font-size: 1.2rem;
+    position: relative;
+    margin-bottom: 2.1rem;
+}
+.info .capacity{
+    
+    margin-top: 3rem;
+    
+    font-size: 0.9rem;
+    opacity: 0.9;
+    align-self: flex-start; 
+    position: absolute;
+    left: 3px;
+}
+.Nearest-hotel{
+    position: absolute;
+    margin-top:rem;
+}
+
+.card-button {
+    cursor: pointer;
+    transform: translate(-50%, 125%);
+    width: 40%;
+    border-radius: 1rem;
+    border: none;
+    background: linear-gradient(to right , red  0%,#e60000 40%,#009900 60%, green 100%);
+    color: #fff;
+    font-size: 1rem;
+    padding: .1rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+   }
+.stade-card:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+   }
+#prev-btn, #next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  #prev-btn { left: 0.5rem; }
+  #next-btn { right: 0.5rem; }
+.prev-row:hover{
+    color: tomato;
+}
+   
+  
+  
